@@ -1,6 +1,7 @@
 import { Grid, GridItem, HStack, Show } from '@chakra-ui/react';
 import { useState } from 'react';
 import GameGrid from './components/GameGrid';
+import GameHeading from './components/GameHeading';
 import GenreList from './components/GenreList';
 import NavBar from './components/NavBar';
 import PlatformSelector from './components/PlatformSelector';
@@ -56,6 +57,7 @@ function App() {
               setGameQuery({ ...gameQuery, sortOrder })
             }
           />
+          <GameHeading gameQuery={gameQuery} />
         </HStack>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>

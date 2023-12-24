@@ -1,14 +1,13 @@
-import { HStack, Image, Text } from '@chakra-ui/react';
+import { HStack, Image } from '@chakra-ui/react';
 import logoD from '../assets/logo-d.webp';
+import SearchInput from './SearchInput';
 import ThemeSwitcher from './ThemeSwitcher';
 
 const NavBar = () => {
   return (
-    <HStack justifyContent="space-between" padding="10px">
-      <HStack>
-        <Image src={logoD} boxSize="64px" />
-        <Text>NavBar</Text>
-      </HStack>
+    <HStack padding="10px">
+      <Image src={logoD} boxSize="64px" />
+      <SearchInput />
       <ThemeSwitcher />
     </HStack>
   );
